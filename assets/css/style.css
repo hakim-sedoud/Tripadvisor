@@ -281,9 +281,18 @@ width: 480;
     color: #333333;
  }
  div.note {
-    height: 14px;
+    display: flex;
+    height: 30px;
     font-size: 12px;
     color: #333333;
+ }
+ div.note i {
+    font-size: 10px;
+    color: #00AA6C ;
+    padding: 1px;
+ }
+ div.note p {
+    font-size: 12px;
  }
 
  .carrousel i {
