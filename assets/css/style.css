@@ -1,8 +1,11 @@
 body{
+    display: flex;
+    flex-direction: column;
     font-family: TS-Reg, sans-serif;
+    align-items: center;
 }
 .container {
-    width: 1136px;
+    max-width: 1136px;
     margin: auto;
 }
 ::-webkit-scrollbar {
@@ -12,6 +15,9 @@ body{
 
 /* 00000000000000000000--HEADER--00000000000000000000000 */
 header {
+    z-index: 1;
+    background-color: white;
+    position: fixed;
     height: 60px;
     display: flex;
     justify-content: space-between;
@@ -66,8 +72,8 @@ header button:hover {
 
 /* --------------TOP BLOC ----------- */
 .topbloc {
-    padding: 30px 0 24px 0;
-}
+    padding: 90px 0 24px 0;
+    max-width: 1136px;}
 .topbloc div {
     height: 90px;
 }
@@ -90,15 +96,12 @@ main h1 {
 }
 div.topbloc nav {
     background-color: white;
-    width: 1136px;
+    max-width: 1136px;
     height: 68px;
-    position: fixed;
-    z-index: 1;
     display: flex;
+    padding: 16px 0 8px 0;
     gap: 15px;
-    padding: 16px 0 8px 0
 }
-
 .topbloc nav a {
     display: flex;
     justify-content: space-between;
@@ -109,6 +112,8 @@ div.topbloc nav {
     text-decoration: none;
     color: inherit;
 }
+
+  
 .topbloc nav a:hover {
     color: white;
     background-color: black;
@@ -117,7 +122,6 @@ div.topbloc nav {
 /* --------------PICS BLOC ----------- */
 
 .picsbloc {
-    margin-top: 110px;
     display: flex;
     width: 1136px;
     height: 430px;
@@ -207,7 +211,7 @@ width: 480;
     background-color: rgb(53, 51, 51);
  }
  .P2 img {
-    width: 480px;
+    width: 100%;
     height: 200px;
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
@@ -271,31 +275,33 @@ width: 480;
     padding: 0;
  }
  p.TSP {
-    padding: 0;
+    margin-bottom: 5px;
     font-size: 15px;
     font-weight: bold;
     font-family: Arial, Helvetica, sans-serif
  }
  p.TST {
+    padding-top: 3px;
     font-size: 14px;
     color: #333333;
  }
  div.note {
     display: flex;
-    height: 30px;
+    height: 14px;
     font-size: 12px;
     color: #333333;
  }
  div.note i {
-    font-size: 10px;
+    font-size: 12px;
     color: #00AA6C ;
-    padding: 1px;
  }
  div.note p {
+    padding-left: 5px;
     font-size: 12px;
+    font-family: Arial, Helvetica, sans-serif;
  }
 
- .carrousel i {
+ .carrousel a > i {
     position: absolute;
     right: 10px;
     top: 10px;
@@ -331,6 +337,7 @@ width: 480;
  }
 
  footer {
+    width: 100%;
     background-color: #F9F1EC;
     height: 190px;
     display: flex;
@@ -345,4 +352,18 @@ width: 480;
     text-decoration: none;
     color: inherit;
     font-weight: bold;
+ }
+ 
+ /* 0000000000000 RESPONSIV 0000000000000000000 */
+ @media (max-width:1184px) {
+    div.topbloc nav {
+        flex-wrap: wrap;
+        max-width:1184px;
+        height: 152px;
+        gap: 8px 10px;
+        }
+    .topbloc nav a {
+        flex-basis: calc(33.33% - 50px); /* 20px pour compenser l'espace entre les éléments */
+        max-width: calc(33.33% - 20px);
+    }
  }
