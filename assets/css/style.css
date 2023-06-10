@@ -358,12 +358,10 @@ width: 480;
  @media (max-width:1184px) {
     div.topbloc nav {
         flex-wrap: wrap;
-        max-width:1184px;
         height: 152px;
         gap: 8px 10px;
         }
     .topbloc nav a {
         flex-basis: calc(33.33% - 50px); /* 20px pour compenser l'espace entre les éléments */
-        max-width: calc(33.33% - 20px);
     }
  }
